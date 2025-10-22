@@ -1,0 +1,346 @@
+/* ========================================================
+   BASIC RESET
+======================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fff;
+  color: #06065C;
+}
+
+/* ========================================================
+   HEADER STYLING (Copied from previous file)
+======================================================== */
+.header {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #06065C;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* ========================================================
+   NAVIGATION LINKS
+======================================================== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #1a73e8;
+}
+
+/* ========================================================
+   BUTTON STYLES
+======================================================== */
+.btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-signin {
+  background-color: #fff;
+  border: 1.5px solid #ccc;
+  color: #333;
+}
+
+.btn-register {
+  background: #333;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ========================================================
+   MOBILE MENU TOGGLE
+======================================================== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #06065C;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+
+/* ========================================================
+   ABOUT SECTION
+======================================================== */
+.about-section {
+  padding: 160px 60px 80px 60px;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: hidden; 
+}
+
+.about-text.heading h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 100px;
+  color: #000033;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.about-text.description p {
+  font-size: 22px;
+  line-height: 1.8;
+  color: #06065C;
+  text-align: justify;
+  margin: 0;
+}
+
+.about-images img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ========================================================
+   FOOTER STYLING
+======================================================== */
+.footer {
+  background-color: #06065C;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 50px 5%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    padding: 18px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    padding: 15px 0;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    margin: 8px 0;
+  }
+
+  /* ====== About Section (Mobile) ====== */
+  .about-section {
+    padding: 90px 25px 60px 25px;
+    text-align: center;
+  }
+
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .about-text.heading h1 {
+    font-size: 38px; 
+    font-weight: 700;
+    color: #06065C;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+  }
+
+  .about-text.description p {
+    font-size: 16px; 
+    line-height: 1.8;
+    color: #06065C;
+    text-align: justify;
+    padding: 0 10px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .about-images {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-images img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 12px;
+    margin: 10px auto 0 auto;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* ====== Tablet Layout (1024x1366) ====== */
+@media screen and (max-width: 1366px) and (min-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .about-section {
+    padding: 120px 40px 60px 40px;
+    overflow-x: hidden; 
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    justify-items: center;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden; 
+  }
+
+  .about-text.heading h1 {
+    font-size: 70px;
+    text-align: center;
+    word-wrap: break-word; 
+  }
+
+  .about-text.description p {
+    font-size: 20px;
+    padding: 0 30px;
+    text-align: justify;
+  }
+
+  .about-images img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* ====== Global Safety Rule (All Devices) ====== */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}

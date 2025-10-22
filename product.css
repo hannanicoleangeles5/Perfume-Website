@@ -1,0 +1,324 @@
+/* ========================================================
+   HEADER STYLING
+======================================================== */
+.header {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #06065C;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* ========================================================
+   NAVIGATION LINKS
+======================================================== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #1a73e8;
+}
+
+/* ========================================================
+   BUTTON STYLES
+======================================================== */
+.btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-signin {
+  background-color: #fff;
+  border: 1.5px solid #ccc;
+  color: #333;
+}
+
+.btn-register {
+  background: #333;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ========================================================
+   MOBILE MENU TOGGLE
+======================================================== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #06065C;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN
+======================================================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Hide nav links initially */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    padding: 15px 0;
+    margin-top: 10px;
+  }
+
+  /* Show nav when active */
+  .nav-links.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  /* Make logo smaller and centered when menu open */
+  .navbar.active .logo {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ========================================================
+   ANIMATIONS
+======================================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================================
+   FRAGRANCE & PRODUCT SECTIONS
+======================================================== */
+.fragrance-section {
+  padding: 140px 0 40px 0;
+  text-align: center;
+}
+
+.women-section {
+  padding-top: 140px;
+  padding-bottom: 40px;
+}
+
+.men-section {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.fragrance-section h2 {
+  color: #001a66;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 36px;
+}
+
+/* Product grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-family: 'Merriweather', serif;
+  color: #002080;
+  font-size: 24px;
+  margin: 10px 0 5px;
+  text-align: left;
+}
+
+.card p {
+  font-size: 16px;
+  color: #444;
+  text-align: left;
+}
+
+/* Responsive product grid */
+@media (max-width: 992px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .products {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .fragrance-section h2 {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+}
+
+/* Divider */
+.divider {
+  width: 80%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+}
+
+/* ====== Tablet Layout (1024x1366 iPad Pro and similar) ====== */
+@media screen and (max-width: 1366px) and (min-width: 768px) {
+
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .fragrance-section {
+    padding: 120px 20px 40px 20px;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  .fragrance-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    width: 100%;
+    padding: 0 10px; 
+    box-sizing: border-box;
+    justify-items: center;
+    align-items: start;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 380px;
+    padding: 18px;
+  }
+
+  .card img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+  }
+
+  .card h3 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .card p {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .divider {
+    width: 90%;
+  }
+
+}
+/* ====== Global Safety Rule (All Devices) ====== */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; 
+}

@@ -1,0 +1,497 @@
+/* ========================================================
+   BASIC CSS RESET
+======================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ========================================================
+   HEADER STYLING
+======================================================== */
+.header {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #06065C;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* ========================================================
+   NAVIGATION LINKS
+======================================================== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #1a73e8;
+}
+
+/* ========================================================
+   BUTTON STYLES
+======================================================== */
+.btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-signin {
+  background-color: #fff;
+  border: 1.5px solid #ccc;
+  color: #333;
+}
+
+.btn-register {
+  background: #333;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ========================================================
+   MOBILE MENU TOGGLE
+======================================================== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #06065C;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* ========================================================
+   HERO SECTION
+======================================================== */
+main {
+  padding-top: 120px;
+}
+
+.hero h1,
+.hero h2 {
+  margin-left: 2.5%;
+}
+
+.hero h1 {
+  font-size: 6.5rem;
+  font-weight: 900;
+  color: #06065C;
+  line-height: 1.1;
+  margin-top: 40px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.76);
+}
+
+.hero p {
+  color: #06065C;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 25px 5%;
+}
+
+.hero img {
+  display: block;
+  margin: 25px auto 60px auto;
+  width: 70%;
+  max-width: 100%;
+  height: auto;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin-bottom: 40px;
+}
+
+/* ========================================================
+   COLLECTION SECTION
+======================================================== */
+.collection {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.women {
+  background-image: url('img/red-per.png');
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  padding-top: 20px;
+}
+
+.men {
+  background-image: url('img/blue-per.png');
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+
+.collection .content {
+  max-width: 550px;
+  font-family: 'Merriweather', serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.women .content {
+  padding: 20px 100px 20px 40px;
+}
+
+.men .content {
+  padding: 20px 40px 20px 100px;
+}
+
+/* ========================================================
+   WHY US SECTION
+======================================================== */
+.why-us {
+  text-align: center;
+  margin: 20px 2%;
+  padding-bottom: 20px;
+}
+
+.why-us h2 {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #06065C;
+  margin-bottom: 40px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.why-us .cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.why-us .card {
+  background-color: #fff;
+  width: 340px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+}
+
+.why-us .card h3 {
+  color: #06065C;
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+
+.why-us .card p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.4rem;
+}
+
+/* ========================================================
+   FOOTER STYLING
+======================================================== */
+.footer {
+  background-color: #06065C;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 50px 5%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* ========================================================
+   TABLET RESPONSIVE DESIGN (768px - 1024px)
+======================================================== */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  header {
+    padding: 25px 30px;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .hero h1 {
+    font-size: 4.5rem;
+    margin-top: 60px;
+  }
+
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin: 20px 8%;
+  }
+
+  .hero img {
+    width: 80%;
+    margin: 20px auto 50px auto;
+  }
+
+  .collection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  .collection .content {
+    max-width: 90%;
+    font-size: 1.3rem;
+    padding: 0;
+  }
+
+  .why-us h2 {
+    font-size: 4.5rem;
+  }
+
+  .why-us .cards {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .why-us .card {
+    width: 45%;
+    height: auto;
+  }
+
+  .about-section {
+    padding: 120px 40px 60px 40px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+
+  .about-text.heading h1 {
+    font-size: 70px;
+  }
+}
+
+/* ========================================================
+   MOBILE RESPONSIVE DESIGN (max-width: 768px)
+======================================================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    padding: 15px 0;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 3.8rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    margin: 15px 8%;
+  }
+
+  .why-us h2 {
+    font-size: 3rem;
+  }
+
+  .why-us .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+ /* ====== Footer ====== */
+.footer {
+    text-align: left;
+    padding: 40px 25px;
+  }
+
+  .footer-flex {
+    flex-direction: column; 
+    align-items: left; 
+    gap: 35px;
+  }
+
+  .footer-col {
+    width: 100%;
+    flex: unset;
+  }
+
+  .footer-col h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul {
+    padding: 0;
+  }
+
+  .footer-col ul li {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+
+  .social-icons {
+    justify-content: left;
+    gap: 15px;
+  }
+
+  .social-icons img {
+    width: 28px;
+    height: 28px;
+  }
+}
+/* ========================================================
+   ANIMATIONS
+======================================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

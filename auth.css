@@ -1,0 +1,195 @@
+/* ====== Global ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ====== Background Image ====== */
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* ====== Soft Overlay for Elegance ====== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 245, 235, 0.55);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+/* ====== Auth Section ====== */
+.auth-section {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ====== Container ====== */
+.auth-container {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(15px);
+  padding: 50px 60px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(150, 100, 50, 0.3);
+  text-align: center;
+  width: 400px;
+  border: 1px solid rgba(255, 224, 190, 0.6);
+  transition: all 0.35s ease;
+}
+
+.auth-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(150, 100, 50, 0.4);
+}
+
+/* ====== Branding ====== */
+.brand {
+  color: #6d4c41;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px rgba(160, 120, 70, 0.25);
+}
+
+.auth-container h2 {
+  font-size: 1.8rem;
+  color: #b36a5e;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* ====== Form ====== */
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #4a3728;
+}
+
+input {
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #dcbfa6;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+input:hover {
+  border-color: #c6975b;
+}
+
+input:focus {
+  border-color: #b36a5e;
+  box-shadow: 0 0 10px rgba(179, 106, 94, 0.35);
+  outline: none;
+}
+
+/* ====== Button ====== */
+.btn {
+  background: linear-gradient(135deg, #b36a5e, #8e5a4e);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 10px rgba(140, 90, 50, 0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #c97b6b, #a66754);
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(140, 90, 50, 0.35);
+}
+
+/* ====== Switch Link ====== */
+.switch-link {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.switch-link a {
+  color: #a66754;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+.switch-link a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: #a66754;
+  transition: width 0.3s ease;
+}
+
+.switch-link a:hover::after {
+  width: 100%;
+}
+
+/* ====== Quote ====== */
+.quote {
+  margin-top: 25px;
+  font-style: italic;
+  color: #6d4c41;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.quote span {
+  display: block;
+  margin-top: 5px;
+  font-weight: 600;
+  color: #b36a5e;
+}
+
+/* ====== Responsive ====== */
+@media screen and (max-width: 480px) {
+  .auth-container {
+    width: 90%;
+    padding: 40px 25px;
+  }
+
+  .auth-container h2 {
+    font-size: 1.5rem;
+  }
+}

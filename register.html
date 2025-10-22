@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Celestial Essence</title>
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+  <section class="auth-section">
+    <img src="img/background.png" alt="Background" class="bg-image" />
+    <div class="auth-container">
+      <h1 class="brand">CELESTIAL ESSENCE</h1>
+      <h2>Create Account</h2>
+
+      <form id="register-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Create a password" required />
+
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm" placeholder="Confirm your password" required />
+
+        <button type="submit" class="btn">Register</button>
+        <p class="switch-link">
+          Already have an account?
+          <a href="sign.html">Sign In</a>
+        </p>
+      </form>
+
+      <p class="quote">
+        “Register now to embrace your true essence where every scent tells your story.”
+        <span>— Celestial Essence</span>
+      </p>
+
+      <p id="reg-message" class="message"></p>
+    </div>
+  </section>
+
+  <script src="signregis.js"></script>
+</body>
+</html>
